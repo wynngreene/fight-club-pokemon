@@ -1,9 +1,15 @@
+document.getElementById("searchForm").addEventListener("submit", function (e) {
+  e.preventDefault(); // Prevent the page from reloading
+  getPokemon();
+});
+
 async function getPokemon() {
   const input = document.getElementById("pokeInput").value;
   const id = parseInt(input, 10);
 
   if (isNaN(id) || id < 1 || id > 251) {
-    document.getElementById("pokeInfo").innerHTML = `<p style="color:red;">Please enter a number between 1 and 251.</p>`;
+    document.getElementById("pokeInfo").innerHTML =
+      `<p style="color:red;">Please enter a number between 1 and 251.</p>`;
     return;
   }
 
@@ -19,7 +25,6 @@ async function getPokemon() {
     const typeList = data.types.map(t => t.type.name).join(", ");
     const hp = data.stats.find(s => s.stat.name === "hp").base_stat;
     const atk = data.stats.find(s => s.stat.name === "attack").base_stat;
-
     const fullJSON = JSON.stringify(data, null, 2);
 
     document.getElementById("pokeInfo").innerHTML = `
@@ -33,6 +38,7 @@ async function getPokemon() {
       </details>
     `;
   } catch (err) {
-    document.getElementById("pokeInfo").innerHTML = `<p style="color:red;">${err.message}</p>`;
+    document.getElementById("pokeInfo").innerHTML =
+      `<p style="color:red;">${err.message}</p>`;
   }
 }
