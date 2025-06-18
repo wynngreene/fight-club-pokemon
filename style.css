@@ -1,0 +1,21 @@
+<style>
+  body {
+    font-family: Arial;
+    text-align: center;
+    padding: 30px;
+  }
+  input {
+    padding: 10px;
+    font-size: 16px;
+  }
+  button {
+    padding: 10px 20px;
+    font-size: 16px;
+    margin-left: 10px;
+  }
+  #pokeInfo img {
+    width: 200px;
+    height: auto;
+    margin-top: 10px;
+  }
+</style>
