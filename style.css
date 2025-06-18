@@ -53,3 +53,13 @@ button {
     width: 150px;
   }
 }
+
+pre {
+  background: #eee;
+  padding: 15px;
+  text-align: left;
+  max-width: 90vw;
+  overflow-x: auto;
+  font-size: 12px;
+  border-radius: 5px;
+}
