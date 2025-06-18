@@ -7,9 +7,18 @@
 </head>
 <body>
   <h1>Pokédex: Generation 1 & 2</h1>
-  
-  <input type="number" id="pokeInput" min="1" max="251" placeholder="Enter ID (1–251)">
-  <button onclick="getPokemon()">Search</button>
+
+  <form id="searchForm">
+    <input
+      type="number"
+      id="pokeInput"
+      min="1"
+      max="251"
+      placeholder="Enter ID (1–251)"
+      required
+    >
+    <button type="submit">Search</button>
+  </form>
 
   <div id="pokeInfo"></div>
 
